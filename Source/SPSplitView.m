@@ -821,8 +821,13 @@ static BOOL isOSAtLeast10_7;
 		return;
 	}
 
+//	for (NSUInteger i = 0; i < [[self subviews] count] - 1; i++) {
+//		[self setPosition:[[viewDetails objectAtIndex:i] floatValue] ofDividerAtIndex:i];
+//	}
+	
+	// Temporarilly hard code width till someone fixes it
 	for (NSUInteger i = 0; i < [[self subviews] count] - 1; i++) {
-		[self setPosition:[[viewDetails objectAtIndex:i] floatValue] ofDividerAtIndex:i];
+		[self setPosition:120 ofDividerAtIndex:i];
 	}
 }
 
